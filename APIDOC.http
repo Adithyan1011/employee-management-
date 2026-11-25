@@ -1,0 +1,56 @@
+###
+POST http://127.0.0.1:8000/register/
+Content-Type : application/json
+
+{
+    "username":"adhi",
+    "email":"adhi@gmail.com",
+    "password":"adhi132"
+}
+
+###
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username":"adhi",
+    "password":"adhi132"
+}
+
+
+###
+GET http://127.0.0.1:8000/employee/
+Accept: application/json
+Authorization: Token 96851cc6b299d000f049b51407b036766ad64c4c
+
+###
+POST http://127.0.0.1:8000/employee/
+Content-Type: application/json
+
+{
+    "name":"adithyan",
+    "department":"development",
+    "designation":"developer",
+    "salary":"2lpa"
+}
+
+###
+GET http://127.0.0.1:8000/employee/1/
+Accept: application/json
+Authorization: Token 96851cc6b299d000f049b51407b036766ad64c4c
+
+###
+PUT http://127.0.0.1:8000/employee/1/
+Content-Type: application/json
+Authorization: Token 96851cc6b299d000f049b51407b036766ad64c4c
+
+{
+    "name":"adithyan",
+    "department":"development",
+    "designation":"python developer",
+    "salary":"2lpa"
+}
+
+###
+DELETE http://127.0.0.1:8000/employee/1/
+Accept: application/json
